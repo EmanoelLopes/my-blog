@@ -1,14 +1,25 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Emanoel Lopes`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Emanoel Lopes`,
+      summary: `Software Engineer focused on Front-End development from Sao Paulo, Brazil.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `My personal blog made with Gatsby, React and Graphql`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    navLinks: {
+      about: `/about`,
+      blog: `/blog`,
+      contact: `/contact`,
+    },
     social: {
-      twitter: `kylemathews`,
+      twitter: `https://twitter.com/mallander`,
+      linkedin: `https://www.linkedin.com/in/emanoel-lopes-64100839/`,
+      github: `https://github.com/EmanoelLopes`,
+      codepen: `https://codepen.io/emanoellopes`,
+      devto: `https://dev.to/emanoellopes`,
     },
   },
   plugins: [
@@ -25,6 +36,15 @@ module.exports = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        components: path.join(__dirname, 'src/components'),
+        pages: path.join(__dirname, 'src/pages'),
+        templates: path.join(__dirname, 'src/templates'),
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -60,11 +80,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Emanoel Lopes`,
+        short_name: `Emanoel Lopes`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#1e90ff`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

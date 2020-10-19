@@ -1,5 +1,4 @@
 /* CSS Custom Properties Definitions */
-
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
@@ -11,7 +10,8 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-3xl);
+  --maxHeight-viewport: 100vh;
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -27,7 +27,7 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: Oswald, Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
@@ -54,12 +54,26 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
+
+  /* Themes */
+
+  /* Light */
+  --light-mode-color-primary: #eb4d4b;
+  --light-mode-color-text: #2f3542;
+  --light-mode-color-text-light: #4f5969;
+  --light-mode-color-heading: #57606f;
+  --light-mode-color-heading-black: black;
+  --light-mode-color-accent: #d1dce5;
+  --light-mode-color-background: #f1f2f6;
+
+  /* Dark */
+  --dark-mode-color-primary: #fff;
+  --dark-mode-color-text: #fff;
+  --dark-mode-color-text-dark: #4f5969;
+  --dark-mode-color-heading: #1a202c;
+  --dark-mode-color-heading-black: black;
+  --dark-mode-color-accent: #d1dce5;
+  --dark-mode-color-background: #2f3542;
 }
 
 /* HTML elements */
@@ -78,9 +92,13 @@ html {
 }
 
 body {
+  background-color: var(--light-mode-color-background);
+  border-bottom: 10px solid var(--light-mode-color-primary);
+  border-top: 10px solid var(--light-mode-color-primary);
+  color: var(--light-mode-color-text);
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
-  color: var(--color-text);
+  min-height: var(--maxHeight-viewport);
 }
 
 footer {
@@ -88,7 +106,7 @@ footer {
 }
 
 hr {
-  background: var(--color-accent);
+  background: var(--light-mode-color-accent);
   height: 1px;
   border: 0;
 }
@@ -102,10 +120,10 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-6);
-  line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
+  line-height: var(--lineHeight-tight);
+  margin-bottom: var(--spacing-6);
+  margin-top: var(--spacing-12);
 }
 
 h2,
@@ -113,14 +131,14 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--light-mode-color-heading);
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--light-mode-color-heading);
 }
 
 h2 {
@@ -169,12 +187,13 @@ p {
 
 ul,
 ol {
+  list-style: none;
+  list-style-image: none;
+  list-style-position: outside;
+  margin-bottom: var(--spacing-8);
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
-  margin-bottom: var(--spacing-8);
-  list-style-position: outside;
-  list-style-image: none;
 }
 
 ul li,
@@ -197,11 +216,11 @@ li > ul {
 }
 
 blockquote {
-  color: var(--color-text-light);
+  color: var(--light-mode-color-text-light);
   margin-left: calc(-1 * var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
+  border-left: var(--spacing-1) solid var(--light-mode-color-primary);
   font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
@@ -224,13 +243,13 @@ table {
 }
 
 table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--light-mode-color-accent);
 }
 
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: var(--light-mode-color-primary);
 }
 
 a:hover,
@@ -255,8 +274,9 @@ a:focus {
 }
 
 .main-heading {
+  color: var(--light-mode-color-primary);
   font-size: var(--fontSize-7);
-  margin: 0;
+  text-align: center;
 }
 
 .post-list-item {
@@ -270,7 +290,7 @@ a:focus {
 
 .post-list-item h2 {
   font-size: var(--fontSize-4);
-  color: var(--color-primary);
+  color: var(--light-mode-color-primary);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
 }
@@ -280,14 +300,16 @@ a:focus {
 }
 
 .header-link-home {
-  font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
+  font-size: var(--fontSize-4);
+  font-weight: var(--fontWeight-bold);
   text-decoration: none;
-  font-size: var(--fontSize-2);
 }
 
 .bio {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   margin-bottom: var(--spacing-16);
 }
 
@@ -296,10 +318,21 @@ a:focus {
 }
 
 .bio-avatar {
-  margin-right: var(--spacing-4);
-  margin-bottom: var(--spacing-0);
-  min-width: 50px;
   border-radius: 100%;
+  border: 5px solid var(--light-mode-color-primary);
+  margin-bottom: var(--spacing-8);
+  min-width: 150px;
+}
+
+.social,
+.social ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social li a {
+  font-size: var(--fontSize-5);
+  margin: 0 var(--spacing-2);
 }
 
 .blog-post header h1 {
@@ -312,11 +345,40 @@ a:focus {
 }
 
 .blog-post-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
   margin: var(--spacing-0);
+  padding: 0;
+}
+
+.footer {
+  text-align: center;
+}
+
+.not-found-text {
+  margin: var(--spacing-10) 0;
+  text-align: center;
 }
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+/* Dark Mode Theme */
+body.dark-mode-on {
+  background-color: var(--dark-mode-color-background);
+  color: var(--light-mode-color-text);
+}
+
+body.dark-mode-on .blog-post h1,
+body.dark-mode-on .blog-post h2,
+body.dark-mode-on .blog-post h3,
+body.dark-mode-on .blog-post h4,
+body.dark-mode-on .blog-post h5,
+body.dark-mode-on .blog-post h6 {
+  color: var(--dark-mode-color-primary);
 }
 
 /* Media queries */

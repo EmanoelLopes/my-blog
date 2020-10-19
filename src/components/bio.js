@@ -1,20 +1,14 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react';
+import Social from 'components/Social';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
+          fixed(width: 150, height: 150, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -25,19 +19,14 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
         }
       }
     }
-  `)
+  `);
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
-
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  const author = data.site.siteMetadata?.author;
+  const avatar = data?.avatar?.childImageSharp?.fixed;
 
   return (
     <div className="bio">
@@ -46,22 +35,21 @@ const Bio = () => {
           fixed={avatar}
           alt={author?.name || ``}
           className="bio-avatar"
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
         />
       )}
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
-        </p>
+        <div>
+          <p>
+            Hi, my name is <strong>{author.name}</strong>, {author?.summary || null}
+          </p>
+          <p>
+            Actually I work on the professional's journey team at <strong><a rel="noreferrer" target="_blank" href="https://www.vagas.com.br/" title="VAGAS Tecnologia">VAGAS Tecnologia</a></strong>, a company focused on the development of scalable applications that help people to get employed and companies find the best collaborators.
+          </p>
+        </div>
       )}
+      <Social />
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Social from 'components/Social';
+import Social from 'components/social';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 

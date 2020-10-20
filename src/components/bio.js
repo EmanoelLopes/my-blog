@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Social from 'components/social';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-const Bio = () => {
+const Bio = ({ isComplete }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -37,19 +38,27 @@ const Bio = () => {
           className="bio-avatar"
         />
       )}
-      {author?.name && (
+      {(author?.name && isComplete) && (
         <div>
           <p>
-            Hi, my name is <strong>{author.name}</strong>, {author?.summary || null}
+            Olá! Meu nome é <strong>{author.name}</strong>, {author?.summary || null}
           </p>
           <p>
-            Actually I work on the professional's journey team at <strong><a rel="noreferrer" target="_blank" href="https://www.vagas.com.br/" title="VAGAS Tecnologia">VAGAS Tecnologia</a></strong>, a company focused on the development of scalable applications that help people to get employed and companies find the best collaborators.
+            Atualmente trabalho no time de Jornada do Profissional na <strong><a rel="noreferrer" target="_blank" href="https://www.vagas.com.br/" title="VAGAS Tecnologia">VAGAS Tecnologia</a></strong>, empresa de tecnologia focada no desenvolvimento de aplicações escaláveis que ajudam pessoas a conseguir emprego e empresas a contratar os melhores colaboradores.
           </p>
         </div>
       )}
       <Social />
     </div>
   );
+};
+
+Bio.defaultProps = {
+  isComplete: true,
+};
+
+Bio.propTypes = {
+  isComplete: PropTypes.bool,
 };
 
 export default Bio;

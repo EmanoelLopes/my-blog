@@ -5,7 +5,7 @@ module.exports = {
     title: `Emanoel Lopes`,
     author: {
       name: `Emanoel Lopes`,
-      summary: `Software Engineer focused on Front-End development from Sao Paulo, Brazil.`,
+      summary: `Engenheiro de Software com foco em desenvolvimento Front-End, de São Paulo, Brasil.`,
     },
     description: `My personal blog made with Gatsby, React and Graphql`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,

@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-          <Bio />
+          <Bio isComplete={false} />
         </footer>
       </article>
       <nav className="blog-post-nav">

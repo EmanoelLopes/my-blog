@@ -21,7 +21,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <Bio />
-      <h4><span role="img" aria-label="Pencil emoji">✏️</span> Last posts</h4>
+      <h4><span role="img" aria-label="Pencil emoji">✏️</span> Postagens mais recentes</h4>
       <ol>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

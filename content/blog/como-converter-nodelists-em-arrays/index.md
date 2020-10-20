@@ -85,4 +85,4 @@ Suporte aos navegadores via Can I Use: https://caniuse.com/?search=spread%20oper
 
 ## Conclusão
 
-Existem diversas formas de converter uma NodeList num array para facilitar sua manipulacão no DOM. A escolha delas vai depender de alguns fatores como suporte aos navegadores, uso de polyfills para alguns métodos, etc.
+Existem diversas formas de converter uma NodeList num array para facilitar sua manipulacão no DOM. A escolha delas vai depender de alguns fatores como suporte aos navegadores, uso de polyfills para alguns métodos, se sua aplicação utiliza transpilers que garantam o uso de ES6+ e coisas do gênero.

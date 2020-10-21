@@ -111,6 +111,10 @@ hr {
   border: 0;
 }
 
+pre {
+  border-radius: 5px;
+}
+
 /* Heading */
 
 h1,
@@ -427,7 +431,6 @@ body.dark-mode-on .theme-toggle {
 }
 
 /* Media queries */
-
 @media (max-width: 42rem) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);

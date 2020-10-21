@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
+import useLocalStorage from 'hooks/useLocalStorage';
 
 const Layout = ({ location, title, children }) => {
   const [darkModeOn, setDarkModeOn] = useState(false);
+  const [storedDarkMode, setStoredDarkMode] = useLocalStorage('darkMode', false);
+  const body = Array.from(document.getElementsByTagName('body'))[0];
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location.pathname === rootPath;
   let header;
@@ -22,11 +25,20 @@ const Layout = ({ location, title, children }) => {
   }
 
   const handleToggleTheme = () => {
-    const body = Array.from(document.getElementsByTagName('body'))[0];
-
     setDarkModeOn(value => !value);
+    setStoredDarkMode(value => !value);
     body.classList.toggle('dark-mode-on');
   };
+
+  useEffect(() => {
+    let unmounted = false;
+
+    if (!unmounted) {
+      return (storedDarkMode)
+        ? body.classList.add('dark-mode-on')
+        : body.classList.remove('dark-mode-on');
+    }
+  }, [body, storedDarkMode])
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>

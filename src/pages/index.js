@@ -22,9 +22,10 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="Home" />
       <Bio />
       <p className="text-bold">
+        <span>Postagens mais recentes </span>
         <span role="img" aria-label="Pencil emoji">✏️</span>
         {` `}
-        <span> Postagens mais recentes</span>
+        <span role="img" aria-label="Notebook emoji">📔</span>
       </p>
       <ol>
         {posts.map(post => {

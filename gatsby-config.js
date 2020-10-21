@@ -7,7 +7,7 @@ module.exports = {
       name: `Emanoel Lopes`,
       summary: `Engenheiro de Software com foco em desenvolvimento Front-End, de São Paulo, Brasil.`,
     },
-    description: `My personal blog made with Gatsby, React and Graphql`,
+    description: `Emanoel Lopes - Engenheiro de Software Front-End`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     navLinks: {
       about: `/about`,
@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-43463179-1`,
       },
     },
     `gatsby-plugin-feed`,
@@ -83,8 +83,8 @@ module.exports = {
         name: `Emanoel Lopes`,
         short_name: `Emanoel Lopes`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#1e90ff`,
+        background_color: `#f1f2f6`,
+        theme_color: `#eb4d4b`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

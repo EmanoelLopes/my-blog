@@ -5,7 +5,7 @@ description: "Algumas maneiras bem simples e eficientes de transformar NodeLists
 tags: ["javascript"]
 ---
 
-Se você em algum momento precisou manipular e iterar vários itens no DOM, é bem provável que já tenha se deparado com uma <b>NodeList</b>.
+Se você em algum momento precisou manipular e iterar vários itens no [DOM](https://developer.mozilla.org/pt-BR/docs/DOM), é bem provável que já tenha se deparado com uma <b>NodeList</b>.
 Como informado na [documentação da MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/NodeList), os objetos `NodeLists` são coleções de nós similares aos objetos retornados de métodos como `Node.childNodes` e `document.querySelectorAll()`. <br />
 Sendo assim, é bem comum uma criarmos pequena confusão de que NodeLists são iteráveis como arrays:
 

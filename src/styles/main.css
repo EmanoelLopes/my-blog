@@ -58,7 +58,7 @@
   /* Themes */
 
   /* Light */
-  --light-mode-color-primary: #eb4d4b;
+  --light-mode-color-primary: #c0392b;
   --light-mode-color-text: #2f3542;
   --light-mode-color-text-light: #4f5969;
   --light-mode-color-heading: #57606f;
@@ -67,10 +67,10 @@
   --light-mode-color-background: #f1f2f6;
 
   /* Dark */
-  --dark-mode-color-primary: #eb4d4b;
+  --dark-mode-color-primary: #ff7979;
   --dark-mode-color-text: #f1f2f6;
   --dark-mode-color-text-light: #f1f2f6;
-  --dark-mode-color-heading: #eb4d4b;
+  --dark-mode-color-heading: #ff7979;
   --dark-mode-color-heading-wjite: white;
   --dark-mode-color-accent: #d1dce5;
   --dark-mode-color-background: #2f3542;
@@ -391,6 +391,8 @@ a:focus {
 /* Dark Mode Theme */
 body.dark-mode-on {
   background-color: var(--dark-mode-color-background);
+  border-bottom: 10px solid var(--dark-mode-color-primary);
+  border-top: 10px solid var(--dark-mode-color-primary);
   color: var(--dark-mode-color-text);
 }
 
@@ -414,6 +416,14 @@ body.dark-mode-on .blog-post h6 {
 
 body.dark-mode-on blockquote {
   color: var(--dark-mode-color-text);
+}
+
+body.dark-mode-on a {
+  color: var(--dark-mode-color-primary);
+}
+
+body.dark-mode-on .theme-toggle {
+  background-color: var(--dark-mode-color-primary);
 }
 
 /* Media queries */

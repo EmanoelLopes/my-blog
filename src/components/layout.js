@@ -5,7 +5,7 @@ import useLocalStorage from 'hooks/useLocalStorage';
 const Layout = ({ location, title, children }) => {
   const [darkModeOn, setDarkModeOn] = useState(false);
   const [storedDarkMode, setStoredDarkMode] = useLocalStorage('darkMode', false);
-  const body = Array.from(document.getElementsByTagName('body'))[0];
+  const body = typeof document !== 'undefined' && Array.from(document.getElementsByTagName('body'))[0];
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location.pathname === rootPath;
   let header;

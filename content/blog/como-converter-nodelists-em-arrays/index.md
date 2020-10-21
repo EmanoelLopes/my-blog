@@ -27,9 +27,12 @@ Aqui apresento algumas diferentes abordagens de como converter NodeLists em arra
 O bom e velho `for` sempre funciona, bom para usar quando precisa dar suporte em navegadores muito antigos:
 
 ```javascript
+var anchors = document.querySelectorAll('a');
+var arrayOfAnchors = [];
+
 for (var i = 0; i < anchors.length; i++) {
   var item = anchors[i];
-  console.log(item);
+  arrayOfAnchors.push(item);
 }
 ```
 
@@ -59,7 +62,23 @@ Na [MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/NodeList) é explicado
 
 > Apesar de NodeList não ser um Array, é possível ser iterada usando o método forEach(). Muitos navegadores antigos ainda não implementaram este método
 
-Suporte aos navegadores via Can I Use: https://caniuse.com/?search=forEach
+Suporte dos navegadores: https://caniuse.com/?search=forEach
+
+### for...of
+
+Também é possível obter um array de uma NodeList utlizando o `for...of`:
+
+```javascript
+const anchors = document.querySelectorAll('a');
+let arrayOfAnchors = [];
+
+for (item of anchors) {
+  let item = anchors[i];
+  arrayOfAnchors.push(item);
+}
+```
+
+Suporte dos navegadores: https://caniuse.com/?search=for...of
 
 ### Array.from()
 
@@ -70,7 +89,7 @@ Array.from(anchors).map(i => console.log(i));
 ```
 O `Array.from()` permite que você crie arrays à partir de objetos array-like e [Objetos iteráveis](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), como o [Map](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map) e o [Set](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
-Suporte aos navegadores via Can I Use: https://caniuse.com/?search=array%20from
+Suporte dos navegadores: https://caniuse.com/?search=array%20from
 
 ### Spread Operator
 
@@ -81,7 +100,7 @@ const anchors = [...document.querySelectorAll('a')];
 Array.isArray(anchors) // true
 ```
 
-Suporte aos navegadores via Can I Use: https://caniuse.com/?search=spread%20operator
+Suporte dos navegadores: https://caniuse.com/?search=spread%20operator
 
 ## Conclusão
 

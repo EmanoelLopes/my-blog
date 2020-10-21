@@ -257,6 +257,11 @@ a:focus {
   text-decoration: none;
 }
 
+/* Helpers */
+.text-bold {
+  font-weight: var(--fontWeight-bold);
+}
+
 /* Custom classes */
 
 .global-wrapper {

@@ -32,6 +32,7 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <button
         className="theme-toggle"
+        aria-label="Alterar o tema"
         onClick={handleToggleTheme}>
           {darkModeOn
             ? <i className="bx bxs-sun"></i>

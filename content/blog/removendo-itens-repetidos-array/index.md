@@ -1,7 +1,7 @@
 ---
 title: Removendo itens repetidos em arrays
 date: "2020-10-21T22:12:03.284Z"
-description: "Como remover de maneira bem simples itens que se repetem em arrays"
+description: "Transformando em únicos os itens de arrays"
 tags: ["javascript"]
 ---
 
@@ -72,4 +72,4 @@ unique([1, 2, 3, 4, 4, 5, 10, 10, 125]);
 ```
 
 ## Conclusão:
-Bibliotecas como o <b>Lodash</b> são ótimas pois tem excelentes funções helpers para nos ajudar como nos casos acima mas pondere o seu uso. A maioria costuma inflar o bundle final de suas aplicações, o que pode comprometer a performance. Em alguns casos não é necessário o uso de nenhuma lib uma vez que você pode criar suas próprios funções.
+Bibliotecas como o <b>Lodash</b> são ótimas pois tem excelentes funções helpers para nos ajudar como nos casos acima mas pondere o seu uso. A maioria costuma inflar o bundle final de suas aplicações, o que pode comprometer a performance. Em alguns casos não é necessário o uso de nenhuma lib uma vez que você pode criar suas próprias funções.

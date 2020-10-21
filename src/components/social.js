@@ -8,6 +8,7 @@ const Social = () => {
       codepen: 'https://codepen.io/emanoellopes',
       devto: 'https://dev.to/emanoellopes',
       twitter: 'https://twitter.com/mallander',
+      email: 'mailto:emanoel.lopes.web@gmail.com',
     },
     icons: {
       github: 'bx bxl-github',
@@ -15,6 +16,7 @@ const Social = () => {
       codepen: 'bx bxl-codepen',
       devto: 'bx bxl-dev-to',
       twitter: 'bx bxl-twitter',
+      email: 'bx bx-envelope',
     }
   };
 

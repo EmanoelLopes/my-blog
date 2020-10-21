@@ -25,8 +25,8 @@ Podemos criar uma função nativa utilizando o `prototype`:
 
 ```javascript
 Array.prototype.unique = function() {
-  return this.filter(function (value, index, self) {
-    return self.indexOf(value) === index;
+  return this.filter(function (value, index, array) {
+    return array.indexOf(value) === index;
   });
 }
 
@@ -40,8 +40,8 @@ Similar ao uso do `prototype` mas através da criação de uma função:
 
 ```javascript
 function unique(arr) {
-  return arr.filter(function (value, index, self) {
-    return self.indexOf(value) === index;
+  return arr.filter(function (value, index, array) {
+    return array.indexOf(value) === index;
   });
 }
 
@@ -54,7 +54,7 @@ unique([1, 2, 3, 4, 4, 5, 10, 10, 125]);
 Utilizando o `Array.prototype.filter()` de forma bem sucinta via arrow function e em uma única linha:
 
 ```javascript
-const unique = (arr) => arr.filter((v, i, s) => s.indexOf(v) === i);
+const unique = (arr) => arr.filter((v, i, a) => a.indexOf(v) === i);
 
 unique([1, 2, 3, 4, 4, 5, 10, 10, 125]);
 // (7) [1, 2, 3, 4, 5, 10, 125]

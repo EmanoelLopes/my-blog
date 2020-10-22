@@ -5,17 +5,17 @@ description: "Contornando alguns problemas como as variáveis globais window ou 
 tags: ["javascript"]
 ---
 
-Quando desenvolvi um site com Gatsby pela primeira vez, a experiência de desenvolvimento foi excelente. Já a experiência de deploy nem tanto.
+Quando desenvolvi um site com Gatsby pela primeira vez, a experiência de desenvolvimento foi excelente. Já a experiência de deploy nem tanto...
 
 ![window is not defined](./deploy-error.jpg)
 
-O que aconteceu com o `window`? Para onde ele foi?
+O que aconteceu com o `window`? Para onde ele foi? `¯\_(ツ)_/¯`
 
 Esse erro acontece quando executamos o `gatsby build`. O mesmo não acontece quando executamos o `gatsby develop` mas a questão é, por que?
 
 ## O problema
 
-Na real é bem simples de entender o que aconteceu aqui. Quando executamos o `gatsbu develop`, o objeto `window`assim como o `document` estão disponívels pois o código está rodando no `client side`. No processo de build (`gatsby build`), o Gatsby compila o seu código no server side e o `Webpack` vai empacotar tudo o que é preciso para o deploy em produção, contudo, por ser gerado no lado do servidor o objeto `window` não é encontrado.
+Na real é bem simples de entender o que aconteceu aqui. Quando executamos o `gatsby develop`, o objeto `window`assim como o `document` estão disponívels pois o código está rodando no `client side`, ou seja em runtime. No processo de build (`gatsby build`), o Gatsby compila o seu código no server side e o `Webpack` vai empacotar tudo o que é preciso para o deploy em produção, contudo, por ser gerado no lado do servidor o objeto `window` não é encontrado.
 
 ## Como corrigir o problema
 
@@ -36,7 +36,7 @@ Desta forma, os objetos ficarão disponíveis dentro da sua aplicação mesmo no
 ```javascript
   const [storedValue, setStoredValue] = useState(() => {
     const windowGlobal = typeof window !== 'undefined' && window;
-    const item = windowGobal.localStorage.getItem(key);
+    const item = windowGlobal.localStorage.getItem(key);
     return item ? JSON.parse(item) : initialValue;
   });
 ```

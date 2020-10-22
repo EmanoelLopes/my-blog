@@ -36,7 +36,7 @@ Array.prototype.unique = function() {
 
 ### Criando uma função
 
-Similar ao uso do `prototype` mas através da criação de uma função:
+Similar ao uso do `prototype` mas através da criação de uma função nomeada:
 
 ```javascript
 function unique(arr) {

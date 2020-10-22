@@ -15,7 +15,7 @@ Esse erro acontece quando executamos o `gatsby build`. O mesmo não acontece qua
 
 ## O problema
 
-Na real é bem simples de entender o que aconteceu aqui. Quando executamos o `gatsby develop`, o objeto `window`assim como o `document` estão disponívels pois o código está rodando no `client side`, ou seja em runtime. No processo de build (`gatsby build`), o Gatsby compila o seu código no server side e o `Webpack` vai empacotar tudo o que é preciso para o deploy em produção, contudo, por ser gerado no lado do servidor o objeto `window` não é encontrado.
+Na real é bem simples de entender o que aconteceu aqui. Quando executamos o `gatsby develop`, o objeto `window` assim como o `document` estão disponívels pois o código está rodando no `client side`, ou seja em runtime. No processo de build (`gatsby build`), o Gatsby compila o seu código no server side e o `Webpack` vai empacotar tudo o que é preciso para o deploy em produção, contudo, por ser gerado no lado do servidor o objeto `window` não é encontrado.
 
 ## Como corrigir o problema
 

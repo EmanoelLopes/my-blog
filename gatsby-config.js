@@ -83,7 +83,7 @@ module.exports = {
         background_color: `#f1f2f6`,
         theme_color: `#eb4d4b`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `static/icons/apple-icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },

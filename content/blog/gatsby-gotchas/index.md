@@ -1,7 +1,7 @@
 ---
 title: Gatsby Gotchas
 date: "2020-10-22T22:10:00.284Z"
-description: "Contornando alguns problemas como as variáveis globais window ou document retornando undefined no Gatsby"
+description: "Contornando alguns problemas como as variáveis globais window ou document retornando undefined no Gatsby."
 tags: ["javascript"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Removendo itens repetidos em arrays
 date: "2020-10-21T22:12:03.284Z"
-description: "Transformando em únicos os itens de arrays"
+description: "Transformando em únicos os itens de arrays."
 tags: ["javascript"]
 ---
 

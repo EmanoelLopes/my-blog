@@ -1,7 +1,7 @@
 ---
 title: Custom React localStorage Hook
 date: "2020-10-21T22:15:03.284Z"
-description: "Criando um custom React Hook para lidar com localStorage"
+description: "Criando um custom React Hook para lidar com localStorage."
 tags: ["React", "React Hooks", "JavaScript", "localStorage"]
 ---
 

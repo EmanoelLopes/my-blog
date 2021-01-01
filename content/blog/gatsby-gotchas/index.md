@@ -9,7 +9,7 @@ Quando desenvolvi um site com Gatsby pela primeira vez, a experiência de desenv
 
 ![window is not defined](./deploy-error.jpg)
 
-O que aconteceu com o `window`? Para onde ele foi? `¯\_(ツ)_/¯`
+Aí você se pergunta: o que raios aconteceu com o objeto global `window`? Para onde ele foi? `¯\_(ツ)_/¯`
 
 Esse erro acontece quando executamos o `gatsby build`. O mesmo não acontece quando executamos o `gatsby develop` mas a questão é, por que?
 

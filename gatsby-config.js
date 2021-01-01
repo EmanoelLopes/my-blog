@@ -5,15 +5,10 @@ module.exports = {
     title: `Emanoel Lopes`,
     author: {
       name: `Emanoel Lopes`,
-      summary: `Engenheiro de Software com foco em desenvolvimento Front-End, de São Paulo, Brasil.`,
+      summary: `Engenheiro de Software Front-End, de São Paulo, Brasil.`,
     },
     description: `Emanoel Lopes - Engenheiro de Software Front-End`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    navLinks: {
-      about: `/about`,
-      blog: `/blog`,
-      contact: `/contact`,
-    },
+    siteUrl: `https://emanoellopes.me`,
     social: {
       twitter: `https://twitter.com/mallander`,
       linkedin: `https://www.linkedin.com/in/emanoel-lopes-64100839/`,

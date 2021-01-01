@@ -31,7 +31,7 @@ const Bio = ({ isComplete }) => {
 
   return (
     <div className="bio">
-      {avatar && (
+      {(avatar && isComplete) && (
         <Image
           fixed={avatar}
           alt={author?.name || ``}
@@ -46,6 +46,7 @@ const Bio = ({ isComplete }) => {
           <p>
             Atualmente trabalho no time de Jornada do Profissional na <strong><a rel="noreferrer" target="_blank" href="https://www.vagas.com.br/" title="VAGAS Tecnologia">VAGAS Tecnologia</a></strong>, empresa de tecnologia focada no desenvolvimento de aplicações escaláveis que ajudam pessoas a conseguir emprego e empresas a contratar os melhores colaboradores.
           </p>
+          <p>Sou um apreciador de café, escravo de 5 gatos e corredor amador nas horas livres.</p>
         </div>
       )}
       <Social />

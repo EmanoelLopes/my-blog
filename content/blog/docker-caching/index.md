@@ -29,9 +29,18 @@ CMD ["node", "app/index.js"]
 
 A diferença está aqui:
 
+De
+
+```docker
+COPY . /app
+RUN npm install --production
+```
+Para
+
 ```docker
 COPY package.json /app/package.json
 RUN cd /app; npm install --production
+COPY . /app
 ```
 O comando acima fará com que as dependências da sua aplicação sejam armazenadas e versionadas. O Docker verificará se houve alguma nova alteração no `package.json`. Caso não ocorra nenhuma alteração, o build acontece normalmente sem a necessidade de instalar novamente as dependências fazendo com que o deploy seja natualmente mais rápido.
 

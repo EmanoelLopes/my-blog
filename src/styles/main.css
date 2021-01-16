@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  /* or block, swap, fallback, optional */
+  src: local(''),
+       url('../fonts/Oswald/oswald-v35-latin-regular.woff2') format('woff2'),
+       /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Oswald/oswald-v35-latin-regular.woff') format('woff');
+       /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  unicode-range: U+000-5FF;
+  /* Latin glyphs */
+}
+
 /* CSS Custom Properties Definitions */
 :root {
   --maxWidth-none: "none";

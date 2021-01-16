@@ -69,7 +69,6 @@ const SEO = ({ description, lang, meta, title }) => {
         }
       ].concat(meta)}
     >
-      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
     </Helmet>
   )
 }

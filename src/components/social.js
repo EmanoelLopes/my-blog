@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'components/icon';
 
 const Social = () => {
   const social = {
@@ -11,13 +12,13 @@ const Social = () => {
       email: 'mailto:emanoel.lopes.web@gmail.com',
     },
     icons: {
-      github: 'bx bxl-github',
-      linkedin: 'bx bxl-linkedin',
-      codepen: 'bx bxl-codepen',
-      devto: 'bx bxl-dev-to',
-      twitter: 'bx bxl-twitter',
-      email: 'bx bx-envelope',
-    }
+      github: 'github',
+      linkedin: 'linkedin',
+      codepen: 'codepen',
+      devto: 'devTo',
+      twitter: 'twitter',
+      email: 'envelope',
+    },
   };
 
   return (
@@ -31,7 +32,7 @@ const Social = () => {
               rel="noopener noreferrer"
               title={Object.keys(social.links)[index]}
             >
-              <i className={Object.values(social.icons)[index]}></i>
+              <Icon name={Object.values(social.icons)[index]} />
             </a>
           </li>
         ))}

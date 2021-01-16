@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import useLocalStorage from 'hooks/useLocalStorage';
+import Icon from 'components/icon';
 
 const Layout = ({ location, title, children }) => {
   const [darkModeOn, setDarkModeOn] = useState(false);
@@ -47,8 +48,8 @@ const Layout = ({ location, title, children }) => {
         aria-label="Alterar o tema"
         onClick={handleToggleTheme}>
           {darkModeOn
-            ? <i className="bx bxs-sun"></i>
-            : <i className='bx bxs-moon' ></i>
+            ? <Icon name="sun" />
+            : <Icon name="moon" />
           }
       </button>
       <header className="global-header">

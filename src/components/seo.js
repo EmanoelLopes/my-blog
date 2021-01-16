@@ -70,7 +70,6 @@ const SEO = ({ description, lang, meta, title }) => {
       ].concat(meta)}
     >
       <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
-      <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css" />
     </Helmet>
   )
 }

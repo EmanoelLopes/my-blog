@@ -71,7 +71,7 @@
   --dark-mode-color-text: #f1f2f6;
   --dark-mode-color-text-light: #f1f2f6;
   --dark-mode-color-heading: #ff7979;
-  --dark-mode-color-heading-wjite: white;
+  --dark-mode-color-heading-white: white;
   --dark-mode-color-accent: #d1dce5;
   --dark-mode-color-background: #2f3542;
 }
@@ -361,6 +361,27 @@ a:focus {
   margin: 0 var(--spacing-2);
 }
 
+.social .icon-svg > svg {
+  fill: var(--light-mode-color-primary);
+}
+
+.icon-svg--sun,
+.icon-svg--moon {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.icon-svg--sun > svg {
+  fill: var(--dark-mode-color-heading-white);
+}
+
+.icon-svg--moon > svg {
+  fill: var(--dark-mode-color-text-light);
+}
+
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
@@ -428,6 +449,10 @@ body.dark-mode-on a {
 
 body.dark-mode-on .theme-toggle {
   background-color: var(--dark-mode-color-primary);
+}
+
+body.dark-mode-on .social .icon-svg > svg {
+  fill: var(--dark-mode-color-primary);
 }
 
 /* Media queries */

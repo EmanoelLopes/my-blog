@@ -2,7 +2,7 @@
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
+  font-display: swap;
   /* or block, swap, fallback, optional */
   src: local(''),
        url('../fonts/Oswald/oswald-v35-latin-regular.woff2') format('woff2'),

@@ -39,6 +39,8 @@ const Layout = ({ location, title, children }) => {
         ? body.classList.add('dark-mode-on')
         : body.classList.remove('dark-mode-on');
     }
+    
+    return () => unmounted = true;
   }, [body, storedDarkMode])
 
   return (

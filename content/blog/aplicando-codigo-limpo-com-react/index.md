@@ -174,7 +174,7 @@ function UsersList() {
         </li>
       )}
     </ul>
-  )
+  );
 }
 ```
 
@@ -206,7 +206,7 @@ function UsersList() {
         </li>
       )}
     </ul>
-  )
+  );
 }
 ```
 
@@ -228,7 +228,7 @@ function UsersList() {
         </li>
       )}
     </ul>
-  )
+  );
 }
 ```
 
@@ -324,7 +324,7 @@ export const SomeComponent = () => {
 
 ### 8. Faça uso de componentes funcionais invés de classes
 
-Como [informado na própria documentação do React](https://pt-br.reactjs.org/docs/hooks-intro.html#classes-confuse-both-people-and-machines), classes dificultam a organização e a legibilidade do código. Além disso, ainda tem o uso do `this` cujo contexto pode adicionar uma complexidade maior na sua aplicação. Portanto, sempre que possível utilize componentes funcionais invés de classes.
+Como [informado na própria documentação do React](https://pt-br.reactjs.org/docs/hooks-intro.html#classes-confuse-both-people-and-machines), classes dificultam a organização e a legibilidade do código. Além disso, ainda tem o uso do `this` cujo contexto é confuso e contra intuitivo, pode adicionar uma complexidade maior na sua aplicação. Portanto, sempre que possível utilize componentes funcionais invés de classes.
 
 Ruim:
 
@@ -407,9 +407,9 @@ Bom
   const handleVisibility = () => setCount(isVisible => !isVisible);
 ```
 
-### 10. Hooks: useEffect eventListeners cleanup
+### 10. Hooks: cleanup de eventListeners no useEffect
 
-Quando for adicionar algum eventListener dentro de um `useEffect`, jamais esqueça de removê-lo no return effect para prevenir problemas desde performance a memory leaks. Apenas uma observação: o `cleanup` no return do effect tem a mesma função do antigo `componentWillUnmount`.
+Quando for adicionar algum eventListener dentro de um `useEffect`, jamais esqueça de removê-lo no return do effect para prevenir problemas desde performance a memory leaks. Apenas uma observação: o `cleanup` no return do effect tem a mesma função do antigo `componentWillUnmount`.
 
 
 Ruim
@@ -431,11 +431,12 @@ Bom
 ```
 
 ### Conclusão:
-As práticas abordardas acima se atribuem principalmente em aplicações React, contudo, também são boas práticas aplicadas em Vanila JavaScript e em até mesmo outros frameworks como Vue.js ou Angular.
+Os exemplos abordardos acima se atribuem principalmente em aplicações React. No entanto, também são boas práticas para serem aplicadas em Vanilla JavaScript e em até mesmo outros frameworks como Vue.js ou Angular.
 
 ### Dicas de leitura
 
  - [React Clean Code - Simple ways to write better and cleaner code](https://dev.to/thawkin3/react-clean-code-simple-ways-to-write-better-and-cleaner-code-2loa)
  - [Small Tips to Write Better React Code](https://livecodestream.dev/post/small-tips-to-write-better-react-code/)
  - [Writing (clean) React code](https://dev.to/jithinks97/writing-clean-react-code-2mcm)
+  - [Handling null and undefined in JavaScript](https://medium.com/javascript-scene/handling-null-and-undefined-in-javascript-1500c65d51ae)
  - [Introdução aos Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)

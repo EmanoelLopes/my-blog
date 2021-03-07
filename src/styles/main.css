@@ -428,6 +428,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.gatsby-resp-image-image {
+  border: 3px solid var(--light-mode-color-primary);
+}
+
 /* Dark Mode Theme */
 body.dark-mode-on {
   background-color: var(--dark-mode-color-background);
@@ -466,8 +470,16 @@ body.dark-mode-on .theme-toggle {
   background-color: var(--dark-mode-color-primary);
 }
 
+body.dark-mode-on .bio-avatar {
+  border: 5px solid var(--dark-mode-color-primary);
+}
+
 body.dark-mode-on .social .icon-svg > svg {
   fill: var(--dark-mode-color-primary);
+}
+
+body.dark-mode-on .gatsby-resp-image-image {
+  border: 3px solid var(--dark-mode-color-primary);
 }
 
 /* Media queries */

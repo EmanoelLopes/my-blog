@@ -5,6 +5,8 @@ description: "Aplicando algumas técnicas de como de escrever um código melhor,
 tags: ["javascript", "react", "clean code"]
 ---
 
+![Cleaning Materials](./cleaning.jpg)
+
 Para quem já leu o [Clean Code](https://books.google.com.br/books/about/C%C3%B3digo_Limpo.html?id=GXWkDwAAQBAJ&printsec=frontcover&source=kp_read_button&redir_esc=y#v=onepage&q&f=false) de [Robert C. Martin](https://pt.wikipedia.org/wiki/Robert_Cecil_Martin), popularmente conhecido como "Uncle Bob", já sabe que código limpo vai muito além do código. Código limpo tem muito mais a ver legibilidade, simplicidade na compreensão e organização.
 
 Neste post pretendo mostrar algumas abordagens de como aplicar o `clean code` em aplicações React. Lembrando os exemplos em questão são apenas sugestões e não regras e está tudo bem também caso não concorde com elas.

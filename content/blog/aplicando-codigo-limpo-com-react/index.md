@@ -13,7 +13,7 @@ Neste post pretendo mostrar algumas abordagens de como aplicar o `clean code` em
 
 ### 1. Use nomes concisos e claros para props
 
-Evite usar nomear `props` com letras ou outros formatos que não mostrem um contexto claro ou sua real finalidade.
+Evite nomear `props` com letras ou outros formatos que não mostrem um contexto claro ou sua real finalidade.
 
 Ruim:
 ```jsx
@@ -60,12 +60,14 @@ Caso não esteja utilizando nenhum superset de type checking como [TypeScript](h
 Ruim:
 
 ```jsx
-function Card({ user }) {
+function Card({ user, handleClick, children }) {
   return (
     <div className="card-user">
-      <h1>{user.name}</h1>
+      <h1>Name: {user.name}</h1>
       <p>Age: {user.age}</p>
-      <p>Age: {user.profession}</p>
+      <p>Profession: {user.profession}</p>
+      <button onClick={handleClick}>Click!</button>
+      <div>{children}</div>
     </div>
   );
 }
@@ -74,20 +76,28 @@ function Card({ user }) {
 Bom:
 
 ```jsx
-import { object } from 'prop-types';
+import PropTypes from 'prop-types';
 
-function Card({ user }) {
+function Card({ user, handleClick, children }) {
   return (
     <div className="card-user">
-      <h1>{user.name}</h1>
+      <h1>Name: {user.name}</h1>
       <p>Age: {user.age}</p>
-      <p>Age: {user.profession}</p>
+      <p>Profession: {user.profession}</p>
+      <button onClick={handleClick}>Click!</button>
+      <div>{children}</div>
     </div>
   );
 }
 
 Card.propTypes = {
-  user: object.isRequired
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    profession: PropTypes.string.isRequired,
+  }),
+  handleClick: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired
 };
 ```
 
@@ -98,18 +108,28 @@ Props que não são obrigatórias mas não tem algum valor padrão sempre retorn
 Ruim:
 
 ```jsx
-function Card({ user }) {
+import PropTypes from 'prop-types';
+
+function Card({ user, handleClick, children }) {
   return (
     <div className="card-user">
-      <h1>{user.name}</h1>
+      <h1>Name: {user.name}</h1>
       <p>Age: {user.age}</p>
-      <p>Age: {user.profession}</p>
+      <p>Profession: {user.profession}</p>
+      <button onClick={handleClick}>Click!</button>
+      <div>{children}</div>
     </div>
   );
 }
 
 Card.propTypes = {
-  user: object
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    age: PropTypes.number,
+    profession: PropTypes.string,
+  }),
+  handleClick: PropTypes.func,
+  children: PropTypes.element
 };
 
 ```
@@ -117,24 +137,38 @@ Card.propTypes = {
 Bom:
 
 ```jsx
-import { object } from 'prop-types';
+import PropTypes from 'prop-types';
 
-function Card({ user }) {
+function Card({ user, handleClick, children }) {
   return (
     <div className="card-user">
-      <h1>{user.name}</h1>
+      <h1>Name: {user.name}</h1>
       <p>Age: {user.age}</p>
-      <p>Age: {user.profession}</p>
+      <p>Profession: {user.profession}</p>
+      <button onClick={handleClick}>Click!</button>
+      <div>{children}</div>
     </div>
   );
 }
 
 Card.defaultProps = {
-  user: {}
+  user: {
+    name: undefined,
+    age: undefined,
+    profession: undefined,
+  },
+  handleClick: () => {},
+  children: `<div />`
 };
 
 Card.propTypes = {
-  user: object
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    age: PropTypes.number,
+    profession: PropTypes.string,
+  }),
+  handleClick: PropTypes.func,
+  children: PropTypes.element
 };
 ```
 
@@ -169,7 +203,7 @@ function UsersList() {
       {users.map(user => (
         <li key={user.id}>
           <p>Name: {user.name}</p>
-          <p>Name: {user.age}</p>
+          <p>Age: {user.age}</p>
           <div className="user-details">
             <p>Email: {user.details.email}</p>
           </div>
@@ -183,7 +217,7 @@ function UsersList() {
 Aqui ocorrerá o seguinte erro:
 ```
 TypeError: Cannot read property 'email' of undefined
-09 |   <p>Name: {user.age}</p>
+09 |   <p>Age: {user.age}</p>
 10 |   <p>Email: {user.details.email}</p>
 11 | </div>
 ```
@@ -199,7 +233,7 @@ function UsersList() {
       {users.map(user => (
         <li key={user.id}>
           <p>Name: {user.name}</p>
-          <p>Name: {user.age}</p>
+          <p>Age: {user.age}</p>
           {user?.details?.email && (
             <div className="user-details">
               <p>Email: {user.details.email}</p>
@@ -221,7 +255,7 @@ function UsersList() {
       {users.map(user => (
         <li key={user.id}>
           <p>Name: {user.name}</p>
-          <p>Name: {user.age}</p>
+          <p>Age: {user.age}</p>
           {user && user.details && user.details.email && (
             <div className="user-details">
               <p>Email: {user.details.email}</p>
@@ -399,14 +433,14 @@ Ruim
 ```jsx
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleVisibility = () => setCount(!isVisible);
+  const handleVisibility = () => setIsVisible(!isVisible);
 ```
 
 Bom
 ```jsx
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleVisibility = () => setCount(isVisible => !isVisible);
+  const handleVisibility = () => setIsVisible(isVisible => !isVisible);
 ```
 
 ### 10. Hooks: cleanup de eventListeners no useEffect

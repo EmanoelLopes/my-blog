@@ -153,9 +153,9 @@ function Card({ user, handleClick, children }) {
 
 Card.defaultProps = {
   user: {
-    name: undefined,
-    age: undefined,
-    profession: undefined,
+    name: '',
+    age: '',
+    profession: '',
   },
   handleClick: () => {},
   children: `<div />`

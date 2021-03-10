@@ -402,12 +402,16 @@ class Counter extends React.Component {
 
 export default Counter;
 ```
+
+[Exemplo no CodeSandbox](https://codesandbox.io/s/react-counter-class-component-f9cyl)
+
+
 Bom:
 
 ```jsx
 import { useState } from 'react';
 
-function App() {
+function Counter() {
   const [count, setCount] = useState(0);
 
   const increment = () => setCount((previousValue) => previousValue + 1);
@@ -422,8 +426,10 @@ function App() {
   );
 }
 
-export default App;
+export default Counter;
 ```
+
+[Exemplo no CodeSandbox](https://codesandbox.io/s/react-counter-functional-example-ikxq6)
 
 ### 9. Hooks: useState
 

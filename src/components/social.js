@@ -8,7 +8,6 @@ const Social = () => {
       linkedin: 'https://www.linkedin.com/in/emanoel-lopes-64100839/',
       codepen: 'https://codepen.io/emanoellopes',
       devto: 'https://dev.to/emanoellopes',
-      twitter: 'https://twitter.com/mallander',
       email: 'mailto:emanoel.lopes.web@gmail.com',
     },
     icons: {
@@ -16,7 +15,6 @@ const Social = () => {
       linkedin: 'linkedin',
       codepen: 'codepen',
       devto: 'devTo',
-      twitter: 'twitter',
       email: 'envelope',
     },
   };

@@ -52,6 +52,8 @@ export default function App() {
     body.classList.toggle("dark-mode-on");
   };
 
+  const handleReload = () => window.location.reload();
+
   useEffect(() => {
     let unmounted = false;
 
@@ -60,6 +62,9 @@ export default function App() {
         ? body.classList.add("dark-mode-on")
         : body.classList.remove("dark-mode-on");
     }
+
+    return () => unmounted = true;
+
   }, [body, storedValue]);
 
   return (
@@ -74,7 +79,7 @@ export default function App() {
         If you refresh the screen, the theme that you selected before will be
         active becouse it is persisted on localStorage
       </p>
-      <button onClick={() => window.location.reload()}>
+      <button onClick={handleReload}>
         Click here to refresh the Screen!
       </button>
     </div>

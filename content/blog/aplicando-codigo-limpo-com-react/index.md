@@ -27,7 +27,7 @@ Bom:
 
 ### 2. Use nomes claros para variáveis
 
-Nomeie variáveis com valores claros que façam sentido a sua atribuição:
+Nomeie variáveis com valores claros que façam sentido a sua atribuição.
 
 Ruim:
 
@@ -55,7 +55,7 @@ function SomeComponent() {
 
 ### 3. Faça checagem de tipos com propTypes
 
-Caso não esteja utilizando nenhum superset de type checking como [TypeScript](https://www.typescriptlang.org/) ou [Flow](https://flow.org/), use a [checagem padrão de tipos](https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html) do React com o `propTypes`:
+Caso não esteja utilizando nenhum superset de type checking como [TypeScript](https://www.typescriptlang.org/) ou [Flow](https://flow.org/), use a [checagem padrão de tipos](https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html) do React com o `propTypes`.
 
 Ruim:
 
@@ -103,7 +103,7 @@ Card.propTypes = {
 
 ### 4. Sempre utilize default props para props não obrigatórias
 
-Props que não são obrigatórias mas não tem algum valor padrão sempre retornão `undefined`, o que pode gerar alguns efeitos colaterais indesejados:
+Props que não são obrigatórias mas não tem algum valor padrão sempre retornão `undefined`, o que pode gerar alguns efeitos colaterais indesejados.
 
 Ruim:
 
@@ -270,7 +270,7 @@ function UsersList() {
 
 ### 6. Não use null em renderizações condicionais
 
-Evite usar `null` em condicionais:
+Evite usar `null` em condicionais.
 
 Ruim:
 
@@ -314,7 +314,7 @@ function SomeComponent () {
 
 ### 7. Eventos
 
-Evite usar funções anônimas dentro da renderização dos componentes:
+Evite usar funções anônimas dentro da renderização dos componentes.
 
 Ruim:
 
@@ -433,7 +433,7 @@ export default Counter;
 
 ### 9. Hooks: useState
 
-Sempre que precisar atualizar um estado, utilize uma função com parâmetro:
+Sempre que precisar atualizar um estado, utilize uma função com parâmetro.
 
 Ruim
 ```jsx

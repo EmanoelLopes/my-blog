@@ -6,14 +6,12 @@ const Social = () => {
     links: {
       github: 'https://github.com/EmanoelLopes',
       linkedin: 'https://www.linkedin.com/in/emanoel-lopes-64100839/',
-      codepen: 'https://codepen.io/emanoellopes',
       devto: 'https://dev.to/emanoellopes',
       email: 'mailto:emanoel.lopes.web@gmail.com',
     },
     icons: {
       github: 'github',
       linkedin: 'linkedin',
-      codepen: 'codepen',
       devto: 'devTo',
       email: 'envelope',
     },

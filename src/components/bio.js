@@ -43,7 +43,7 @@ const Bio = ({ isComplete }) => {
           <p>
             Olá! Meu nome é <strong>{author.name}</strong>, {author?.summary || null}
           </p>
-          <p>Sou um apreciador de café e cerveja, escravo de 5 gatos, corredor amador nas horas livres e às vezes eu escrevo algumas coisas por aqui.</p>
+          <p>Sou um apreciador de café, escravo de 5 gatos, corredor amador nas horas livres e às vezes eu escrevo algumas coisas.</p>
         </div>
       )}
       <Social />

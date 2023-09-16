@@ -43,6 +43,9 @@ const Bio = ({ isComplete }) => {
           <p>
             Olá! Meu nome é <strong>{author.name}</strong>, {author?.summary || null}
           </p>
+          <p>
+            Atualmente trabalho no <a href="https://www.linkedin.com/company/luizalabs/mycompany/" target='_blank' rel="noreferrer noopener">Luizalabs</a>, área de tecnologia e inovação do <a href="https://www.magazineluiza.com.br/" target='_blank' rel="noreferrer noopener">Magazine Luiza</a>.
+          </p>
           <p>Sou um apreciador de café, escravo de 5 gatos, corredor amador nas horas livres e às vezes eu escrevo algumas coisas.</p>
         </div>
       )}

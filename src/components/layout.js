@@ -59,7 +59,7 @@ const Layout = ({ location, title, children }) => {
       </header>
       <main>{children}</main>
       <footer className="footer">
-        © {new Date().getFullYear()} <a href="https://emanoellopes.me" title="Emanoel Lopes">emanoellopes.me</a>. Desenvolvido com
+        © {new Date().getFullYear()} <a href="https://emanoellopes.dev" title="Emanoel Lopes">emanoellopes.dev</a>. Desenvolvido com
         {` `}
         <a href="https://www.gatsbyjs.com" title="Gatsby">Gatsby</a>
       </footer>

@@ -8,7 +8,7 @@ module.exports = {
       summary: `Engenheiro de Software Front-End, de São Paulo, Brasil.`,
     },
     description: `Emanoel Lopes - Engenheiro de Software Front-End`,
-    siteUrl: `https://emanoellopes.me`,
+    siteUrl: `https://emanoellopes.dev`,
     social: {
       twitter: `https://twitter.com/mallander`,
       linkedin: `https://www.linkedin.com/in/emanoel-lopes-64100839/`,

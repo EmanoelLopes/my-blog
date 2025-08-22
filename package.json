@@ -23,6 +23,7 @@
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/ts-plugin": "^1.10.4",
+    "@fontsource/montserrat": "^5.2.6",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.3",
     "tailwind": "^4.0.0",

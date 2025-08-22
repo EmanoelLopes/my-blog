@@ -1,7 +1,16 @@
 {
-  "name": "strong-satellite",
-  "type": "module",
+  "name": "emanoellopes.dev",
+  "description": "My personal website/blog",
   "version": "0.0.1",
+  "engines": {
+    "node": "22.18.0"
+  },
+  "type": "module",
+  "author": "Emanoel Lopes <emanoel.lopes.web@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emanoellopes/my-blog/issues"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +18,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.3"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/netlify": "^6.5.8",
+    "@astrojs/partytown": "^2.1.4",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/ts-plugin": "^1.10.4",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.3",
+    "tailwind": "^4.0.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

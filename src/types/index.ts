@@ -5,7 +5,7 @@ export type IconNameType =
   | 'linkedin' 
   | 'codepen' 
   | 'twitter' 
-  | 'envelope' 
+  | 'email' 
   | 'moon' 
   | 'sun';
 
@@ -18,13 +18,13 @@ export interface SocialPlatforms {
     github: string;
     linkedin: string;
     devTo: string;
-    twitter: string;
+    email: string;
   };
   icons: {
     github: IconNameType;
     linkedin: IconNameType;
     devTo: IconNameType;
-    twitter: IconNameType;
+    email: IconNameType;
   };
 }
 

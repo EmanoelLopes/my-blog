@@ -18,4 +18,8 @@
   .border-terracotta {
     border-color: #c0392b;
   }
+
+  .fill-terracotta {
+    fill: #c0392b;
+  }
 }

@@ -21,8 +21,9 @@ const Icon = ({ name, size = 'large' }: IconProps) => {
   const iconPaths = icons[name];
 
   return (
-    <i className={`icon-svg icon-svg--${name}`}>
+    <i>
       <svg
+        className="fill-terracotta"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         stroke="currentColor"

@@ -7,8 +7,8 @@ const Social = () => {
   const platformKeys = Object.keys(socialLinks) as (keyof typeof socialLinks)[];
 
   return (
-    <div className="social">
-      <ul>
+    <div>
+      <ul className="flex items-center gap-1">
         {platformKeys.map((platform) => (
           <li key={socialLinks[platform]}>
             <a

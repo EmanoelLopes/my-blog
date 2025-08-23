@@ -1,4 +1,6 @@
-export const site = {
+import type { SiteMetaData } from '../types';
+
+export const site: SiteMetaData = {
   title: 'Emanoel Lopes | emanoellopes.dev',
   metaTags: {
     og: {

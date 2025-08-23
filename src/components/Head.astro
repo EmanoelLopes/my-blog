@@ -4,15 +4,19 @@ import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/400-italic.css';
 import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
+
+import { site } from '../data/siteMetaData';
+
+const { title, metaTags } = site;
 ---
 
 <!-- Title -->
-<title>Emanoel Lopes - emanoellopes.dev</title>
+<title>{title}</title>
 
 <!-- Open Graph tags -->
-<meta property="og:title" content="My New Astro Website" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.example.com/" />
-<meta property="og:description" content="Welcome to my new Astro site!" />
-<meta property="og:image" content="https://www.example.com/_astro/seo-banner.BZD7kegZ.webp">
-<meta property="og:image:alt" content="">
+<meta property="og:title" content={metaTags.og.title} />
+<meta property="og:type" content={metaTags.og.type} />
+<meta property="og:url" content={metaTags.og.url} />
+<meta property="og:description" content={metaTags.og.description} />
+<meta property="og:image" content={metaTags.og.image}>
+<meta property="og:image:alt" content={metaTags.og.imageAlt}>

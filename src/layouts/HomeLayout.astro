@@ -1,9 +1,9 @@
 ---
-import Head from '@components/Head.astro';
-import Header from '@components/Header';
-import Main from '@components/Main.astro';
-import Bio from '@components/Bio';
-import Footer from '@components/Footer';
+import Head from '@components/astro/Head.astro';
+import Header from '@components/react/Header';
+import Main from '@components/astro/Main.astro';
+import Bio from '@components/react/Bio';
+import Footer from '@components/react/Footer';
 ---
 
 <!doctype html>
@@ -12,7 +12,7 @@ import Footer from '@components/Footer';
 		<Head />
 	</head>
 	<body class="h-full grid grid-rows-[70px_1fr_auto]">
-		<Header />
+		<Header client:load />
 		<Main>
 			<Bio />
 		</Main>

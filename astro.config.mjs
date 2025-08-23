@@ -10,7 +10,12 @@ export default defineConfig({
 
   integrations: [
     partytown(),
-    react(),
+    react({
+      include: [
+        '**/react/*',
+        '**/components/*',
+      ],
+    }),
   ],
 
   markdown: {

@@ -1,5 +1,5 @@
-import Icon from '../components/Icon';
-import { social, type IconNameType } from '../constants';
+import Icon from '@components/react/Icon';
+import { social, type IconNameType } from '@constants/index';
 
 const Social = () => {
   const socialLinks = social.links;

@@ -8,7 +8,7 @@ const Social = () => {
 
   return (
     <div>
-      <ul className="flex items-center gap-1">
+      <ul className="flex items-center gap-1 mt-8">
         {platformKeys.map((platform) => (
           <li key={socialLinks[platform]}>
             <a

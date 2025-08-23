@@ -10,5 +10,5 @@
 <h1 align="center"><a href="https://emanoellopes.dev" title="emanoellopes.dev" rel="noreferrer noopener">emanoellopes.dev</a></h1>
 
 <p align="center">
-  My personal Website/Blog/PWA made with <a href="https://www.gatsbyjs.com/" title="Gatsby" rel="noreferrer noopener">Gatsby</a>
+  My personal Website made with <a href="https://www.astro.build/" title="Astro" rel="noreferrer noopener">Astro</a>
 </p>

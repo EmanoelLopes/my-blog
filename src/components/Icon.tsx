@@ -1,4 +1,4 @@
-import { icons } from '../constants';
+import { icons } from '@constants/index';
 
 type SizeKey = keyof typeof sizes;
 type IconName = keyof typeof icons;

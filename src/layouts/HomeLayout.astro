@@ -1,0 +1,21 @@
+---
+import Head from '@components/Head.astro';
+import Header from '@components/Header';
+import Main from '@components/Main.astro';
+import Bio from '@components/Bio';
+import Footer from '@components/Footer';
+---
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<Head />
+	</head>
+	<body class="h-full grid grid-rows-[70px_1fr_auto]">
+		<Header />
+		<Main>
+			<Bio />
+		</Main>
+		<Footer />
+	</body>
+</html>

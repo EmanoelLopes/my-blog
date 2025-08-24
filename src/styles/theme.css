@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Merriweather", "Georgia", Cambria, "Times New Roman", Times, serif;
+  --text-largest: 2.986rem;
+}
+
+@layer base {
+  :root {
+    --color-terracotta: #c0392b;
+    --color-bg-light: #f1f2f6;
+    --color-bg-dark: #2f3542;
+  }
+  
+  .dark {
+    color: var(--color-white);
+    background-color: var(--color-bg-dark);
+  }
+}
+
+@layer components {
+  .bg-terracotta {
+    background-color: var(--color-terracotta);
+  }
+  
+  .text-terracotta {
+    color: var(--color-terracotta);
+  }
+  
+  .border-terracotta {
+    border-color: var(--color-terracotta);
+  }
+
+  .fill-terracotta {
+    fill: var(--color-terracotta);
+  }
+}

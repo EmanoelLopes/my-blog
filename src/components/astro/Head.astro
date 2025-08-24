@@ -1,0 +1,41 @@
+---
+import '@fontsource/montserrat';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/400-italic.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/600.css';
+
+import GTM from './GTM.astro';
+
+import { site } from '@data/siteMetaData';
+import favicon from '@assets/icons/favicon-32x32.png'
+const { title, metaTags } = site;
+---
+
+<!-- Prevent Theme Flash -->
+<script>
+  import { preventThemeFlash } from '@utils/index';
+  {preventThemeFlash()}
+</script>
+
+<!-- Default Meta -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" href={favicon.src} type="image/png">
+<meta name="generator" content={Astro.generator} />
+
+<!-- Open Graph tags -->
+<meta property="og:title" content={metaTags.og.title} />
+<meta property="og:type" content={metaTags.og.type} />
+<meta property="og:url" content={metaTags.og.url} />
+<meta property="og:description" content={metaTags.og.description} />
+<meta property="og:image" content={metaTags.og.image}>
+<meta property="og:image:alt" content={metaTags.og.imageAlt}>
+
+<!-- GTM Script -->
+<GTM />
+
+<!-- Title -->
+<title>{title}</title>

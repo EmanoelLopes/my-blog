@@ -7,10 +7,13 @@ import '@fontsource/montserrat/600.css';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/600.css';
 
+import GTM from './GTM.astro';
+
 import { site } from '@data/siteMetaData';
 import favicon from '@assets/icons/favicon-32x32.png'
 const { title, metaTags } = site;
 ---
+
 <!-- Prevent Theme Flash -->
 <script>
   import { preventThemeFlash } from '@utils/index';
@@ -23,9 +26,6 @@ const { title, metaTags } = site;
 <link rel="icon" href={favicon.src} type="image/png">
 <meta name="generator" content={Astro.generator} />
 
-<!-- Title -->
-<title>{title}</title>
-
 <!-- Open Graph tags -->
 <meta property="og:title" content={metaTags.og.title} />
 <meta property="og:type" content={metaTags.og.type} />
@@ -33,3 +33,9 @@ const { title, metaTags } = site;
 <meta property="og:description" content={metaTags.og.description} />
 <meta property="og:image" content={metaTags.og.image}>
 <meta property="og:image:alt" content={metaTags.og.imageAlt}>
+
+<!-- GTM Script -->
+<GTM />
+
+<!-- Title -->
+<title>{title}</title>

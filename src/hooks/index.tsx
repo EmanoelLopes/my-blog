@@ -1,1 +1,1 @@
-export { default as useToggleTheme } from '../hooks/useToggleTheme';
+export { default as useToggleTheme } from '@hooks/useToggleTheme';

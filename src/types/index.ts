@@ -31,6 +31,7 @@ export interface SocialPlatforms {
 export type SiteMetaData = {
   title: string;
   metaTags: {
+    description: string;
     og: {
       title: string;
       type: string;

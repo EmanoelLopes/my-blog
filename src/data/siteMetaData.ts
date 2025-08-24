@@ -3,6 +3,7 @@ import type { SiteMetaData } from '../types';
 export const site: SiteMetaData = {
   title: 'Emanoel Lopes | emanoellopes.dev',
   metaTags: {
+    description: 'Emanoel Lopes | Meu site pessoal onde de vez em quando escrevo sobre assuntos técnicos relacionados ao mundo do desenvolvimento frontend.',
     og: {
       title: 'Emanoel Lopes | emanoellopes.dev',
       type: 'website',

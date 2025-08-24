@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const useToggleTheme = () => {
-  const [isDarkModeOn, setIsDarkModeOn] = useState(false);
+  const [isDarkModeOn, setIsDarkModeOn] = useState(true);
 
   const handleToggleTheme = useCallback(() => {
     const newDarkMode = !isDarkModeOn;

@@ -4,7 +4,7 @@ const Footer = () => {
         <div>
           <span>© {new Date().getFullYear()}</span>
           {` `}
-          <a className="underline underline-offset-1 text-terracotta" href="https://emanoellopes.dev" title="Emanoel Lopes">
+          <a className="underline underline-offset-1 text-terracotta dark:text-red-300" href="https://emanoellopes.dev" title="Emanoel Lopes">
             emanoellopes.dev
           </a>
           {` - `}
@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
           <span>Desenvolvido com</span>
           {` `}
-          <a className="underline underline-offset-1 text-terracotta" href="https://astro.build/" title="Astro">
+          <a className="underline underline-offset-1 text-terracotta dark:text-red-300" href="https://astro.build/" title="Astro">
             Astro
           </a>
         </div>

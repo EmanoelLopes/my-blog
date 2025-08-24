@@ -11,13 +11,15 @@
 @layer base {
   :root {
     --color-terracotta: #c0392b;
+    --color-terracotta-light: #f26d5f;
     --color-bg-light: #f1f2f6;
     --color-bg-dark: #2f3542;
+    --color-white: #ffffff;
   }
   
   .dark {
-    color: var(--color-white);
-    background-color: var(--color-bg-dark);
+    --color-text-primary: var(--color-white);
+    --color-bg-primary: var(--color-bg-dark);
   }
 }
 
@@ -37,4 +39,13 @@
   .fill-terracotta {
     fill: var(--color-terracotta);
   }
+
+  .text-terracotta-light {
+    color: var(--color-terracotta-light);
+  }
+}
+
+.dark {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
 }

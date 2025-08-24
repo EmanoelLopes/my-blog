@@ -23,7 +23,7 @@ const Icon = ({ name, size = 'large' }: IconProps) => {
   return (
     <i>
       <svg
-        className="fill-terracotta"
+        className="fill-terracotta dark:fill-red-300"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         stroke="currentColor"

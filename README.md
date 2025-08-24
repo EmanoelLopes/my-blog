@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://emanoellopes.dev">
-    <img alt="Coffee Cup" src="https://raw.githubusercontent.com/EmanoelLopes/my-blog/main/static/icons/android-icon-192x192.png" width="192" />
+    <img alt="Coffee Cup" src="https://raw.githubusercontent.com/EmanoelLopes/my-blog/refs/heads/main/src/assets/icons/android-icon-192x192.png" width="192" />
   </a>
 </p>
 

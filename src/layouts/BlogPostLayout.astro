@@ -1,0 +1,25 @@
+---
+/* Astro Components */
+import Head from '@components/astro/Head.astro';
+import Main from '@components/astro/Main.astro';
+import GTMIframe from '@components/astro/GTMIframe.astro';
+
+/* React Components */
+import Header from '@components/react/Header';
+import Footer from '@components/react/Footer';
+---
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<Head />
+	</head>
+	<body class="h-full grid grid-rows-[70px_1fr_auto] bg-light dark:bg-dark">
+		<GTMIframe />
+		<Header client:load />
+		<Main>
+			<slot />
+		</Main>
+		<Footer />
+	</body>
+</html>

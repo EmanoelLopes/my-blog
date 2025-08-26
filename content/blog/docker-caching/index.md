@@ -1,7 +1,7 @@
 ---
 title: "Docker Caching: Otimizando Seus Builds"
 description: "Aprenda a usar caching no Docker para acelerar seus builds em até 70%"
-pubDate: 2024-01-20
+pubDate: 2022-01-20
 author: "Emanoel Lopes"
 tags: ["docker", "devops", "caching"]
 tldr: ""

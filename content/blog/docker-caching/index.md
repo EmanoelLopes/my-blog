@@ -4,6 +4,7 @@ description: "Aprenda a usar caching no Docker para acelerar seus builds em até
 pubDate: 2024-01-20
 author: "Emanoel Lopes"
 tags: ["docker", "devops", "caching"]
+tldr: ""
 ---
 
 Post bem simples e objetivo para começar bem o ano novo e sem a dor de cabeça do [CI](https://en.wikipedia.org/wiki/Continuous_integration) & [CD](https://pt.wikipedia.org/wiki/Entrega_cont%C3%ADnua) toda vez ter que instalar as dependências da sua aplicação a cada deploy.

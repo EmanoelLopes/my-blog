@@ -5,8 +5,8 @@ const Bio = () => {
   const paragraphs = [
     <p key={1} className="mt-2">Olá! 👋</p>,
     <p key={2} className="mt-2">Sou <strong>Emanoel Lopes</strong>, Engenheiro de Software Front-End, de São Paulo, Brasil.</p>,
-    <p key={3} className="mt-2">Atualmente trabalho no <a className="font-bold underline underline-offset-1 text-terracotta dark:text-red-300" href="https://www.linkedin.com/company/luizalabs/" title="Luizalabs">Luizalabs</a>, área de tecnologia e inovação do <a className="font-bold underline underline-offset-1 text-terracotta dark:text-red-300" href="https://www.magazineluiza.com.br/" title="Magazine Luiza">Magazine Luiza</a>.</p>,
-    <p key={4} className="mt-2">Apreciador de café, tutor de 5 gatos, corredor amador nas horas livres e às vezes eu escrevo algumas coisas.</p>,
+    <p key={3} className="mt-2">Atualmente trabalho no <a className="font-bold underline underline-offset-1 text-terracotta dark:text-red-300" href="https://www.linkedin.com/company/luizalabs/" title="Luizalabs" target="_blank" rel="noreferrer noopener">Luizalabs</a>, área de tecnologia e inovação do <a className="font-bold underline underline-offset-1 text-terracotta dark:text-red-300" href="https://www.magazineluiza.com.br/" title="Magazine Luiza" target="_blank" rel="noreferrer noopener">Magazine Luiza</a>.</p>,
+    <p key={4} className="mt-2">Apreciador de café, tutor de 5 gatos, corredor amador nas horas livres e às vezes eu escrevo sobre <a href="/blog" className="font-bold underline underline-offset-1 text-terracotta dark:text-red-300">algumas coisas relacionadas a desenvolvimento e tecnologia</a>.</p>,
   ];
 
   return (

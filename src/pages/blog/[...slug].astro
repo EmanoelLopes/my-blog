@@ -23,7 +23,7 @@ const { Content } = await post.render();
 
 <BlogPostLayout>
   <BlogPost client:load>
-    <article class="prose dark:prose-invert max-w-none">
+    <article class="prose dark:prose-invert max-w-none blog">
       <h1>{post.data.title}</h1>
       <p class="text-gray-600 dark:text-gray-300">
         Publicado em {post.data.pubDate.toLocaleDateString('pt-BR')}

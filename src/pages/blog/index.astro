@@ -12,7 +12,7 @@ const sortedPosts = posts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'
 ---
 
 <BlogPostLayout title="Blog - Emanoel Lopes">
-  <div class="max-w-4xl mx-auto py-8 px-4">
+  <div class="max-w-4xl mx-auto py-8 px-4 blog-post">
     <h1 class="text-2xl text-gray-700 dark:text-white font-bold mb-2 md:mb-4">Meus Artigos</h1>    
     <div class="space-y-6">
       {sortedPosts.map((post: CollectionEntry<"blog">) => (

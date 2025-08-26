@@ -4,6 +4,8 @@ import Header from '@components/react/Header';
 import Main from '@components/astro/Main.astro';
 import GTMIframe from '@components/astro/GTMIframe.astro';
 import Footer from '@components/react/Footer';
+
+import NotFound from '@components/react/NotFound';
 ---
 
 <!doctype html>
@@ -15,7 +17,7 @@ import Footer from '@components/react/Footer';
 		<GTMIframe />
 		<Header client:load />
 		<Main>
-			<slot />
+			<NotFound />
 		</Main>
 		<Footer />
 	</body>

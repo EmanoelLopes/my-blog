@@ -10,11 +10,11 @@ const Bio = () => {
   ];
 
   return (
-    <div className="max-width-lg mx-auto p-6 max-h-fit flex flex-col items-center">
+    <section className="max-width-lg mx-auto p-6 max-h-fit flex flex-col items-center">
       <img className="rounded-full mx-auto mt-2 border-4 border-terracotta dark:border-red-300 w-[120px] h-[120px] md:w-[160px] md:h-[160px]" src={profileImage.src} alt="imagem de Emanoel Lopes" />
       {paragraphs}
       <Social />
-    </div>
+    </section>
   );
 };
 

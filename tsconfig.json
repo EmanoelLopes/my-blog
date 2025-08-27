@@ -10,7 +10,7 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@content/*": ["content/*"],
+      "@content/*": ["src/content/*"],
       "@constants/*": ["src/constants/*"],
       "@data/*": ["src/data/*"],
       "@hooks/*": ["src/hooks/*"],

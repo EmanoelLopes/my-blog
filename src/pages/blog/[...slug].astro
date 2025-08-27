@@ -1,0 +1,34 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BlogPostLayout from '@layouts/BlogPostLayout.astro';
+import BlogPost from '@components/react/BlogPost';
+
+import '@styles/global.css';
+import '@styles/theme.css';
+
+type BlogPost = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  
+  return posts.map((post: BlogPost) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: BlogPost };
+const { Content } = await post.render();
+---
+
+<BlogPostLayout>
+  <BlogPost client:load>
+    <article class="prose dark:prose-invert max-w-none blog">
+      <h1>{post.data.title}</h1>
+      <p class="text-gray-600 dark:text-gray-300">
+        Publicado em {post.data.pubDate.toLocaleDateString('pt-BR')}
+      </p>
+      <Content />
+    </article>
+  </BlogPost>
+</BlogPostLayout>

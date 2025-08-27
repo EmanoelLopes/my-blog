@@ -1,0 +1,44 @@
+---
+import '@styles/global.css';
+import '@styles/theme.css';
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BlogPostLayout from '@layouts/BlogPostLayout.astro';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => 
+  b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+---
+
+<BlogPostLayout title="Blog - Emanoel Lopes">
+  <div class="max-w-4xl mx-auto py-8 px-4 blog-post">
+    <h1 class="text-2xl text-gray-700 dark:text-white font-bold mb-2 md:mb-4">Meus Artigos</h1>    
+    <div class="space-y-6">
+      {sortedPosts.map((post: CollectionEntry<"blog">) => (
+        <article class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <h2 class="text-2xl text-gray-700 dark:text-white font-semibold mb-2">
+            <a href={`/blog/${post.slug}`} class="hover:text-terracotta">
+              {post.data.title}
+            </a>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-50 mb-4">
+            {post.data.description}
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500 dark:text-gray-50">
+              {post.data.pubDate.toLocaleDateString('pt-BR')}
+            </span>
+            <div class="flex gap-2">
+              {post.data.tags.map((tag: string) => (
+                <span class="px-2 py-1 bg-terracotta font-bold dark:bg-red-400 text-white dark:text-gray-900 text-xs rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</BlogPostLayout>

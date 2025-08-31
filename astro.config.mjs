@@ -21,6 +21,9 @@ export default defineConfig({
     shikiConfig: {
       theme: 'catppuccin-macchiato',
     },
+    
+    gfm: true,
+    smartypants: true,
   },
 
   vite: {
